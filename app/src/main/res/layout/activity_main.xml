@@ -10,33 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.lockersoft.caasera.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your account for everything Cassera."
-        android:layout_marginTop="198dp"
-        android:id="@+id/textView"
-        android:textSize="20sp"
-        android:typeface="normal"
-        android:textStyle="normal|bold"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:layout_marginTop="63dp"
-        android:id="@+id/edtLoginName"
-        android:hint="Username"
-        style="@android:style/Widget.Material.EditText"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:backgroundTint="@android:drawable/btn_default_small" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,13 +23,48 @@
         android:hint="Password" />
 
     <Button
-        android:text="Login"
+        android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnLogin"
+        android:id="@+id/button"
         android:layout_below="@+id/edtPassword"
         android:layout_alignStart="@+id/edtPassword"
         android:layout_marginTop="15dp"
         android:layout_alignParentEnd="true"
         android:onClick="btnLoginOnClick" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/edtLoginName"
+        android:hint="Username"
+        style="@android:style/Widget.Material.EditText"
+        android:backgroundTint="@android:drawable/btn_default_small"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your account for everything Cassera."
+        android:layout_marginTop="95dp"
+        android:id="@+id/textView"
+        android:textSize="20sp"
+        android:typeface="normal"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:text="Keep me Logged In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp"
+        android:id="@+id/chbStayLoggedIn"
+        android:checked="false" />
 </RelativeLayout>

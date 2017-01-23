@@ -48,4 +48,15 @@
         android:layout_alignEnd="@+id/edtLoginName"
         android:layout_alignStart="@+id/edtLoginName"
         android:hint="Password" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_below="@+id/edtPassword"
+        android:layout_alignStart="@+id/edtPassword"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentEnd="true"
+        android:onClick="btnLoginOnClick" />
 </RelativeLayout>

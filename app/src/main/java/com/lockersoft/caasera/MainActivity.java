@@ -1,5 +1,6 @@
 package com.lockersoft.caasera;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,5 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "You successfully Logged in: " +
                 edtLoginName.getText().toString() + " " +
                 chbLoggedIn.isChecked(), Toast.LENGTH_LONG).show();
+
+        startActivity(new Intent(this, Landing1.class));
     }
 }

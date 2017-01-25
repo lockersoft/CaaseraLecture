@@ -32,4 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(this, Landing1.class));
     }
+
+    public void switchToBMIOnClick(View v) {
+        startActivity(new Intent(this, BMIActivity.class));
+    }
 }

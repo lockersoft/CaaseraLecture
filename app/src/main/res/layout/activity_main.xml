@@ -33,19 +33,6 @@
         android:layout_alignParentEnd="true"
         android:onClick="btnLoginOnClick" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/edtLoginName"
-        android:hint="Username"
-        style="@android:style/Widget.Material.EditText"
-        android:backgroundTint="@android:drawable/btn_default_small"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,4 +54,25 @@
         android:layout_marginBottom="49dp"
         android:id="@+id/chbStayLoggedIn"
         android:checked="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/edtLoginName"
+        android:hint="Username"
+        style="@android:style/Widget.Material.EditText"
+        android:backgroundTint="@android:drawable/btn_default_small"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <Button
+        android:text="Calculate My BMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnBMICalculator"
+        android:onClick="switchToBMIOnClick" />
 </RelativeLayout>

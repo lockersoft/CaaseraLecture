@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     EditText edtLoginName;
     CheckBox chbLoggedIn;
@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
     public void btnLoginOnClick(View v) {
         Log.i("CLICK", "Login button was clicked.");
         Log.i("CLICK", edtLoginName.getText().toString());
-        Toast.makeText(this, "You successfully Logged in: " +
+        ToastIt("You successfully Logged in: " +
                 edtLoginName.getText().toString() + " " +
-                chbLoggedIn.isChecked(), Toast.LENGTH_LONG).show();
+                chbLoggedIn.isChecked());
 
         startActivity(new Intent(this, Landing1.class));
     }

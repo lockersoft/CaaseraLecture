@@ -31,7 +31,12 @@
         android:layout_alignStart="@+id/edtPassword"
         android:layout_marginTop="15dp"
         android:layout_alignParentEnd="true"
-        android:onClick="btnLoginOnClick" />
+        android:onClick="btnLoginOnClick"
+        android:backgroundTintMode="src_over"
+        tools:textColor="@android:color/background_light"
+        tools:textStyle="bold"
+        android:textSize="24sp"
+        style="@style/Widget.AppCompat.Button" />
 
     <TextView
         android:layout_width="wrap_content"

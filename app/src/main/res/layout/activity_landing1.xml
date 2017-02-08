@@ -17,7 +17,8 @@
         android:layout_height="150dp"
         android:layout_marginTop="138dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
 
         <ImageView
             android:layout_width="0dp"
@@ -69,4 +70,5 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="38dp"
         android:onClick="btnLoginOnClick" />
+
 </RelativeLayout>

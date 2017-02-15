@@ -31,6 +31,9 @@ public class BaseActivity extends AppCompatActivity {
             BMIActivity.class
     };
     static int currentPage = 0;
+    static String username = "";
+    static String password = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,18 +14,19 @@
             android:minSdkVersion="23"
             android:targetSdkVersion="23" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Landing1">
         </activity>
-
-        <activity android:name=".Landing1" >
+        <activity android:name=".BMIActivity" />
+        <activity android:name=".Landing2" />
+        <activity android:name=".FreeTrial" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".LessonHomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BMIActivity" />
-        <activity android:name=".Landing2" />
-        <activity android:name=".FreeTrial"></activity>
     </application>
 
 </manifest>

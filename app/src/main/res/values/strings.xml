@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">CAASera</string>
+    <string name="loginButtonClicked">Login button was clicked.</string>
+    <string name="didntWork">That didn\'t work!!!</string>
+    <string name="idiotString">You are an idiot, please use proper credentials.</string>
+    <string name="everythingCAASera">everything CAASera</string>
+    <string name="lessons">Lessons</string>
+    <string name="successfulLogin">"You successfully Logged in: %1$s  %2$b"</string>
     <string-array name="countries_array">
         <item>Afghanistan</item>
         <item>Albania</item>

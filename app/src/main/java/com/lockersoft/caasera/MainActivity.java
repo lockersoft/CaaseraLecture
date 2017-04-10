@@ -39,8 +39,8 @@ public class MainActivity extends BaseActivity {
     }
 
     public void btnLoginOnClick(View v) {
-        Log.i("CLICK", "Login button was clicked.");
-        Log.i("CLICK", edtLoginName.getText().toString());
+        Log.i("BMI", getString(R.string.loginButtonClicked));
+        Log.i("BMI", edtLoginName.getText().toString());
         username = edtLoginName.getText().toString();
         password = edtPassword.getText().toString();
 
@@ -54,9 +54,10 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         //txtWebContent.setText("Response: " + response.toString());
-                        ToastIt("You successfully Logged in: " +
-                                edtLoginName.getText().toString() + " " +
-                                chbLoggedIn.isChecked());
+                        ToastIt(getString(R.string.successfulLogin, edtLoginName.getText().toString() + " ",
+                                chbLoggedIn.isChecked()));
+
+                        // TODO:  Get the studentInfo JSON object
                         startActivity(new Intent(getApplicationContext(), Landing1.class));
                     }
                 },
@@ -64,7 +65,7 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.i("BMI", "Login error: " + error.networkResponse.statusCode);
-                        ToastIt("You are an idiot, please use proper credentials.");
+                        ToastIt(getString(R.string.idiotString));
                     }
                 }
         ){

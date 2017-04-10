@@ -6,7 +6,6 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -17,7 +16,6 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "sportCategory",
     "subscriptionId"
 })
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class AvailableSubscription {
 
     @JsonProperty("sport")
@@ -77,11 +75,6 @@ public class AvailableSubscription {
     @JsonProperty("subscriptionId")
     public void setSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
-    }
-
-    @Override
-    public String toString() {
-        return ""; // TODO:
     }
 
     @JsonAnyGetter

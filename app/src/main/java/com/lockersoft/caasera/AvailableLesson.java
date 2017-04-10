@@ -6,7 +6,6 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -19,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "lessonNumber",
     "status"
 })
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class AvailableLesson {
 
     @JsonProperty("completedOn")
@@ -108,11 +106,6 @@ public class AvailableLesson {
     public void setStatus(int status) {
         this.status = status;
     }
-
-    @Override
-    public String toString() {
-        return "";
-    } // TODO:
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {

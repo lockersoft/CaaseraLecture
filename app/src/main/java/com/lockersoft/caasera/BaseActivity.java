@@ -33,7 +33,7 @@ public class BaseActivity extends AppCompatActivity {
     static int currentPage = 0;
     static String username = "";
     static String password = "";
-
+    static StudentInfo studentInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

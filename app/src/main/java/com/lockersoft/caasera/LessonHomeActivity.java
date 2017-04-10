@@ -32,7 +32,7 @@ public class LessonHomeActivity extends BaseActivity {
 
   ListView lessons;
   ArrayAdapter<CharSequence> adapter;
-  CAASeraAPI studentInfo;
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -70,13 +70,15 @@ public class LessonHomeActivity extends BaseActivity {
             // Create Jackson ObjectMapper instance
             ObjectMapper objectMapper = new ObjectMapper();
 
-// Convert json string to object
+            // Convert json string to object
             try {
-              studentInfo = objectMapper.readValue(response.toString(), CAASeraAPI.class);
+              studentInfo = objectMapper.readValue(response.toString(), StudentInfo.class );
               Log.i("BMI", studentInfo.getFirstName());
+              Log.i("BMI", studentInfo.getCurrentSubscription().getCurrentLesson().getTitle());
             } catch (IOException e){
               e.printStackTrace();
             }
+
 //            final ArrayAdapter<String> adapter =
 //                new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, items);
 //
@@ -93,14 +95,14 @@ public class LessonHomeActivity extends BaseActivity {
         new Response.ErrorListener() {
           @Override
           public void onErrorResponse(VolleyError error) {
-            ToastIt("That didn't work!!!");
+            ToastIt(getString(R.string.didntWork));
           }
         }
     ) {
       @Override
       public Map<String, String> getHeaders() throws AuthFailureError {
         Map<String, String> headers = new HashMap<String, String>();
-        String credentials = "trial01:bigfoot"; //username + ":" + password;
+        String credentials = "paid01:bigfoot"; //username + ":" + password;
         String auth = "Basic " + Base64.encodeToString(credentials.getBytes(), Base64.NO_WRAP);
         Log.i("BMI", auth);
         headers.put("Authorization", auth);
@@ -109,6 +111,4 @@ public class LessonHomeActivity extends BaseActivity {
     };
     queue.add(jsonRequest);
   }
-
-
 }

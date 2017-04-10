@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CAASera</string>
+    <string name="didntWork">Eso no funcionó !!!</string>
+    <string name="loginButtonClicked">Se ha hecho clic en el botón de inicio de sesión.</string>
+    <string name="idiotString">Eres un idiota, por favor usa credenciales apropiadas.</string>
+    <string name="lessons">Lecciones</string>
+    <string name="successfulLogin">"%1$s You successfully Logged in: %2$b"</string>
+</resources>

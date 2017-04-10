@@ -7,7 +7,6 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -18,8 +17,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "currentSubscription",
     "firstName"
 })
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class CAASeraAPI {
+public class StudentInfo {
 
     @JsonProperty("availableSubscriptions")
     private List<AvailableSubscription> availableSubscriptions = null;
@@ -34,7 +32,7 @@ public class CAASeraAPI {
      * No args constructor for use in serialization
      * 
      */
-    public CAASeraAPI() {
+    public StudentInfo() {
     }
 
     /**
@@ -43,7 +41,7 @@ public class CAASeraAPI {
      * @param availableSubscriptions
      * @param firstName
      */
-    public CAASeraAPI(List<AvailableSubscription> availableSubscriptions, CurrentSubscription currentSubscription, String firstName) {
+    public StudentInfo(List<AvailableSubscription> availableSubscriptions, CurrentSubscription currentSubscription, String firstName) {
         super();
         this.availableSubscriptions = availableSubscriptions;
         this.currentSubscription = currentSubscription;
@@ -78,11 +76,6 @@ public class CAASeraAPI {
     @JsonProperty("firstName")
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-
-    @Override
-    public String toString() {
-        return ""; // TODO:
     }
 
     @JsonAnyGetter

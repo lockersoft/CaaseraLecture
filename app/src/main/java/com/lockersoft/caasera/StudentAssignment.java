@@ -7,7 +7,6 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -24,7 +23,6 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "title",
     "uploadUrl"
 })
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class StudentAssignment {
 
     @JsonProperty("assignmentId")
@@ -168,11 +166,6 @@ public class StudentAssignment {
     @JsonProperty("uploadUrl")
     public void setUploadUrl(Object uploadUrl) {
         this.uploadUrl = uploadUrl;
-    }
-
-    @Override
-    public String toString() {
-        return ""; // TODO:
     }
 
     @JsonAnyGetter
